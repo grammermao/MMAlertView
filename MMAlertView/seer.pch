@@ -1,0 +1,52 @@
+//
+//  seer.pch
+//  seer
+//
+//  Created by Ims on 06/04/2017.
+//  Copyright © 2017 Ims. All rights reserved.
+//
+
+#ifndef seer_pch
+#define seer_pch
+
+
+//#import "MMFastCoder.h"
+//#import "UserManager.h"
+//#import "InputView.h"
+//#import "MMCamera.h"
+//#import "MMPopView.h"
+//#import "MMCashe.h"
+//#import "MMView.h"
+//#import <Masonry.h>
+
+
+//TODO:screen h-w
+#define MM_SCREENWIDTH   [UIScreen mainScreen].bounds.size.width
+#define MM_SCREENHEIGHT  [UIScreen mainScreen].bounds.size.height
+
+//TODO:
+#define MM_USERDEFALT [NSUserDefaults standardUserDefaults]
+//TODO:
+//TODO: setting color
+#define MM_CLEARCOLOR [UIColor clearColor]
+#define MM_RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define MM_RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define MM_BACKGROUND_COLOR [UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:248.0/255.0 alpha:1.0]
+#define MM_MAINCOLOR [UIColor colorWithRed:8.0/255.0 green:159.0/255.0 blue:251.0/255.0 alpha:1.0]
+#define MM_FONT333 [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0]
+#define MM_FONT999 [UIColor colorWithRed:153.0/255.0 green:153.0/255.0 blue:153.0/255.0 alpha:1.0]
+//TODO: MM_LOG_DEBUG
+#ifdef DEBUG
+#define MM_Log(...) NSLog(@"%s(%p) %@", __PRETTY_FUNCTION__, self, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define MM_Log(...)
+#endif
+
+#if DEBUG
+#define MM_Log_AndLine(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+
+#endif /* seer_pch */
