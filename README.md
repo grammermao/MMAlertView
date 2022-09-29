@@ -1,10 +1,10 @@
-####一句话可以实现弹出视图
+#### 一句话可以实现弹出视图
 > 实现效果如下
 
 
 ![Untitled](http://oluznpjl7.bkt.clouddn.com/Untitled.gif)
 
-####使用方法：
+#### 使用方法：
 *  新建视图控制器
 *  `#import "MMAlertView.h"`
 * 第三步 实例化
